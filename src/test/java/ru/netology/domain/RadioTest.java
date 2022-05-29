@@ -61,12 +61,12 @@ public class RadioTest {
     @Test
     void numberNext() {
         Radio cond = new Radio();
-        cond.setCurrentNumber(5);
+        cond.setCurrentNumber(8);
 
         cond.next();
 
         int actual2 = cond.getCurrentNumber();
-        int expected2 = 6;
+        int expected2 = 9;
         Assertions.assertEquals(expected2, actual2);
     }
 

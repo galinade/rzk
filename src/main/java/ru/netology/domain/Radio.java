@@ -20,14 +20,16 @@ public class Radio {
     }
 
     public void next() {
-
+        if (currentNumber == 9) {
+            currentNumber = 0;
+           return ;
+        }
         if (currentNumber < 9) {
             currentNumber = currentNumber + 1;
         }
-        if (currentNumber == 9) {
-            currentNumber = 0;
-        }
+
     }
+
 
     public void prev() {
         if (currentNumber == 0) {
