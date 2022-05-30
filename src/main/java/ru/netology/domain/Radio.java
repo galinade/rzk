@@ -22,7 +22,7 @@ public class Radio {
     public void next() {
         if (currentNumber == 9) {
             currentNumber = 0;
-           return ;
+            return;
         }
         if (currentNumber < 9) {
             currentNumber = currentNumber + 1;
@@ -34,8 +34,9 @@ public class Radio {
     public void prev() {
         if (currentNumber == 0) {
             currentNumber = 9;
+            return;
         }
-        if (currentNumber < 9) {
+        if (currentNumber <= 9) {
             currentNumber = currentNumber - 1;
         }
 

@@ -71,6 +71,19 @@ public class RadioTest {
     }
 
     @Test
+    void numberNext3() {
+        Radio cond = new Radio();
+        cond.setCurrentNumber(0);
+
+        cond.next();
+
+        int actual2 = cond.getCurrentNumber();
+        int expected2 = 1;
+        Assertions.assertEquals(expected2, actual2);
+    }
+
+
+    @Test
     void numberPrev() {
         Radio cond = new Radio();
         cond.setCurrentNumber(0);
@@ -95,14 +108,38 @@ public class RadioTest {
     }
 
     @Test
+    void numberNext2() {
+        Radio cond = new Radio();
+        cond.setCurrentNumber(5);
+
+        cond.next();
+
+        int actual2 = cond.getCurrentNumber();
+        int expected2 = 6;
+        Assertions.assertEquals(expected2, actual2);
+    }
+
+    @Test
     void numberPrev2() {
         Radio cond = new Radio();
-        cond.setCurrentNumber(4);
+        cond.setCurrentNumber(1);
 
         cond.prev();
 
         int actual3 = cond.getCurrentNumber();
-        int expected3 = 3;
+        int expected3 = 0;
+        Assertions.assertEquals(expected3, actual3);
+    }
+
+    @Test
+    void numberPrev3() {
+        Radio cond = new Radio();
+        cond.setCurrentNumber(9);
+
+        cond.prev();
+
+        int actual3 = cond.getCurrentNumber();
+        int expected3 = 8;
         Assertions.assertEquals(expected3, actual3);
     }
 
@@ -144,6 +181,18 @@ public class RadioTest {
     }
 
     @Test
+    void increaseVolume5() {
+        Radio cond = new Radio();
+        cond.setCurrentVolume(0);
+
+        cond.increaseVolume();
+
+        int actual2 = cond.getCurrentVolume();
+        int expected2 = 1;
+        Assertions.assertEquals(expected2, actual2);
+    }
+
+    @Test
     void decreaseVolume4() {
         Radio cond = new Radio();
         cond.setCurrentVolume(0);
@@ -152,6 +201,19 @@ public class RadioTest {
 
         int actual2 = cond.getCurrentVolume();
         int expected2 = 0;
+        Assertions.assertEquals(expected2, actual2);
+
+    }
+
+    @Test
+    void decreaseVolume5() {
+        Radio cond = new Radio();
+        cond.setCurrentVolume(10);
+
+        cond.decreaseVolume();
+
+        int actual2 = cond.getCurrentVolume();
+        int expected2 = 9;
         Assertions.assertEquals(expected2, actual2);
 
     }
