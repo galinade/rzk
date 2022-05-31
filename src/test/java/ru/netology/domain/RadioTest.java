@@ -71,9 +71,21 @@ public class RadioTest {
     }
 
     @Test
+    void numberNext5() {
+        Radio cond = new Radio();
+        cond.setCurrentNumber(11);
+
+        cond.next();
+
+        int actual2 = cond.getCurrentNumber();
+        int expected2 = 1;
+        Assertions.assertEquals(expected2, actual2);
+    }
+
+    @Test
     void numberNext3() {
         Radio cond = new Radio();
-        cond.setCurrentNumber(0);
+        cond.setCurrentNumber(-11);
 
         cond.next();
 
@@ -140,6 +152,18 @@ public class RadioTest {
 
         int actual3 = cond.getCurrentNumber();
         int expected3 = 8;
+        Assertions.assertEquals(expected3, actual3);
+    }
+
+    @Test
+    void numberPrev4() {
+        Radio cond = new Radio();
+        cond.setCurrentNumber(-8);
+
+        cond.prev();
+
+        int actual3 = cond.getCurrentNumber();
+        int expected3 = 9;
         Assertions.assertEquals(expected3, actual3);
     }
 

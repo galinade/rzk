@@ -24,10 +24,8 @@ public class Radio {
             currentNumber = 0;
             return;
         }
-        if (currentNumber < 9) {
-            currentNumber = currentNumber + 1;
-        }
 
+        currentNumber = currentNumber + 1;
     }
 
 
@@ -36,10 +34,8 @@ public class Radio {
             currentNumber = 9;
             return;
         }
-        if (currentNumber <= 9) {
-            currentNumber = currentNumber - 1;
-        }
 
+        currentNumber = currentNumber - 1;
     }
 
 
