@@ -5,12 +5,20 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
     @Test
+    void numberN() {
+        Radio cond = new Radio(17);
+
+        Assertions.assertEquals(16, cond.getMaxNumber());
+    }
+
+    @Test
     void soundMax() {
         Radio cond = new Radio();
-        cond.setCurrentVolume(11);
+        cond.setCurrentVolume(101);
         int actual = cond.getCurrentVolume();
         int expected = 0;
         Assertions.assertEquals(expected, actual);
+
     }
 
     @Test
@@ -195,12 +203,12 @@ public class RadioTest {
     @Test
     void increaseVolume4() {
         Radio cond = new Radio();
-        cond.setCurrentVolume(10);
+        cond.setCurrentVolume(100);
 
         cond.increaseVolume();
 
         int actual2 = cond.getCurrentVolume();
-        int expected2 = 10;
+        int expected2 = 100;
         Assertions.assertEquals(expected2, actual2);
     }
 
@@ -232,12 +240,12 @@ public class RadioTest {
     @Test
     void decreaseVolume5() {
         Radio cond = new Radio();
-        cond.setCurrentVolume(10);
+        cond.setCurrentVolume(100);
 
         cond.decreaseVolume();
 
         int actual2 = cond.getCurrentVolume();
-        int expected2 = 9;
+        int expected2 = 99;
         Assertions.assertEquals(expected2, actual2);
 
     }
